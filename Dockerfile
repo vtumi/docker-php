@@ -28,7 +28,8 @@ RUN apk add --no-cache \
   php81-xml \
   php81-xmlreader \
   php81-zip \
-  php81-zlib
+  php81-zlib \
+  supervisor
 
 # Add composer
 RUN curl -sS https://getcomposer.org/installer | /usr/bin/php81 && \
@@ -39,4 +40,4 @@ STOPSIGNAL SIGQUIT
 
 EXPOSE 9000
 
-CMD ["/usr/sbin/php-fpm81", "-F"]
+CMD ["/usr/bin/supervisord"]
