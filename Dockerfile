@@ -3,6 +3,7 @@ FROM alpine:${ALPINE_VERSION}
 
 # Install packages
 RUN apk add --no-cache \
+  tzdata \
   curl \
   php81 \
   php81-ctype \
