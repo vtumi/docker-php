@@ -1,35 +1,35 @@
-ARG ALPINE_VERSION=3.17
+ARG ALPINE_VERSION=3.21
 FROM alpine:${ALPINE_VERSION}
 
 # Install packages
 RUN apk add --no-cache \
   tzdata \
   curl \
-  php81 \
-  php81-ctype \
-  php81-curl \
-  php81-dom \
-  php81-exif \
-  php81-fileinfo \
-  php81-fpm \
-  php81-gd \
-  php81-iconv \
-  php81-json \
-  php81-mbstring \
-  php81-mysqli \
-  php81-opcache \
-  php81-openssl \
-  php81-pdo \
-  php81-pdo_mysql \
-  php81-pecl-imagick \
-  php81-phar \
-  php81-redis \
-  php81-session \
-  php81-simplexml \
-  php81-xml \
-  php81-xmlreader \
-  php81-zip \
-  php81-zlib \
+  php83 \
+  php83-ctype \
+  php83-curl \
+  php83-dom \
+  php83-exif \
+  php83-fileinfo \
+  php83-fpm \
+  php83-gd \
+  php83-iconv \
+  php83-json \
+  php83-mbstring \
+  php83-mysqli \
+  php83-opcache \
+  php83-openssl \
+  php83-pdo \
+  php83-pdo_mysql \
+  php83-pecl-imagick \
+  php83-phar \
+  php83-redis \
+  php83-session \
+  php83-simplexml \
+  php83-xml \
+  php83-xmlreader \
+  php83-zip \
+  php83-zlib \
   supervisor
 
 # Add composer
