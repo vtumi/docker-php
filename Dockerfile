@@ -33,7 +33,7 @@ RUN apk add --no-cache \
   supervisor
 
 # Add composer
-RUN curl -sS https://getcomposer.org/installer | /usr/bin/php81 && \
+RUN curl -sS https://getcomposer.org/installer | /usr/bin/php83 && \
     chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
