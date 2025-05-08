@@ -37,6 +37,9 @@ RUN curl -sS https://getcomposer.org/installer | /usr/bin/php83 && \
     chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
+RUN ln -s /usr/bin/php83 /usr/bin/php && \
+    ln -s /usr/sbin/php-fpm83 /usr/sbin/php-fpm
+
 STOPSIGNAL SIGQUIT
 
 EXPOSE 9000
