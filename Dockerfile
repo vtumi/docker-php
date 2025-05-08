@@ -32,13 +32,12 @@ RUN apk add --no-cache \
   php83-zlib \
   supervisor
 
+RUN ln -s /usr/sbin/php-fpm83 /usr/sbin/php-fpm
+
 # Add composer
-RUN curl -sS https://getcomposer.org/installer | /usr/bin/php83 && \
+RUN curl -sS https://getcomposer.org/installer | /usr/bin/php && \
     chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer
-
-RUN ln -s /usr/bin/php83 /usr/bin/php && \
-    ln -s /usr/sbin/php-fpm83 /usr/sbin/php-fpm
 
 STOPSIGNAL SIGQUIT
 
